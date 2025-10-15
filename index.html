@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta para Lorena</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fef5f1 0%, #fff0f5 50%, #fef9f3 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Corações flutuantes */
+  .heart {
+    position: fixed;
+    font-size: 30px;
+    color: #d48cae;
+    opacity: 0;
+    animation: float-up 8s ease-in infinite;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  @keyframes float-up {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5) rotate(0deg);
+    }
+    10% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100vh) scale(1.2) rotate(360deg);
+    }
+  }
+
+  .container {
+    max-width: 600px;
+    width: 100%;
+    background: linear-gradient(145deg, #ffffff 0%, #fff5f8 100%);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 
+      0 10px 40px rgba(212, 140, 174, 0.15),
+      0 0 0 1px rgba(212, 140, 174, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h1 {
+    text-align: center;
+    color: #d48cae;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+    font-size: 2.5em;
+    text-shadow: 0 2px 10px rgba(212, 140, 174, 0.2);
+    position: relative;
+  }
+
+  h1::after {
+    content: "💕";
+    display: block;
+    font-size: 0.5em;
+    margin-top: 10px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input, textarea, button {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #d48cae;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #c0779b;
+  }
+
+  .music-button {
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f5e0e8 0%, #fce4ec 100%);
+    color: #d48cae;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(212, 140, 174, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .music-button:hover {
+    background: linear-gradient(135deg, #fce4ec 0%, #f5e0e8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 140, 174, 0.4);
+  }
+
+</style>
+</head>
+<body>
+
+<button class="music-button" id="playBtn">🎧 Ouvir música e ler</button>
+
+<div class="container" id="textContainer">
+  <h1>Para Lorena</h1>
+  
+  <p>Eu realmente não sei nem por onde começar, mas senti que precisava escrever isso. É uma forma de tirar do peito tudo o que tenho guardado há um tempo, coisas que talvez eu nunca consiga dizer pessoalmente com a mesma clareza que consigo colocar em palavras aqui.</p>
+
+  <p>Durante meus 27 anos (quase 28), eu nunca senti algo parecido por ninguém. Pode até parecer estranho ouvir isso de alguém que você praticamente não conhece, mas é a verdade.</p>
+
+  <p>Eu me lembro de todas as vezes que te vi, e mesmo que não tenham sido muitas, ficaram na minha memória de um jeito difícil de explicar. Uma das coisas que mais me arrependo — e já te falei disso uma vez — foi ter deixado passar a primeira oportunidade de conversar com você. Talvez você não saiba, mas pra mim é muito difícil tentar algo novo com alguém. Sou envergonhado e inseguro nesse tipo de situação, e acabo travando. Mas nunca foi falta de interesse, muito pelo contrário — eu só não sabia como me aproximar de você sem parecer forçado.</p>
+
+  <p>Com o tempo, percebi que você começou a ocupar um espaço na minha cabeça e no meu coração sem que eu percebesse. Hoje, toda vez que ouço <em>Iris</em> (Goo Goo Dolls), lembro de você. É automático, você vem na minha cabeça.</p>
+
+  <p>Acho que a gente tem visões bem diferentes sobre algumas coisas. E isso faz sentido — você já viveu coisas que eu nunca vivi, já se envolveu, se decepcionou, e passou por situações que eu sinceramente espero nunca passar hahaha. Eu, por outro lado, nunca namorei, nunca sofri por alguém de verdade, e talvez por isso enxergue as coisas de um jeito diferente. Eu não entendo muito sobre pessoas, nem sobre esse negócio de gostar de alguém… mas eu sei o que eu sinto.</p>
+
+  <p>Preciso ser muito sincero contigo, porque você também foi comigo — e isso é algo que admiro. Desde o início, eu sempre estive ciente do que você me disse: que não estava num momento bom, que ainda gostava do rapaz com quem ficou, e que achava que não seria a companhia certa pra mim agora.</p>
+
+  <p>Eu entendi isso, de verdade. Inclusive, deixei claro que não queria que você pensasse assim, mas que respeitava o teu tempo e o que estava vivendo. Prometi pra mim mesmo que não ficaria insistindo pra te ver ou forçando nada.</p>
+
+  <p>Mas mesmo assim, eu continuei puxando assunto, tentando conversar. Não por teimosia, mas porque, de algum jeito, eu não queria perder o contato contigo. Por mim, eu conversaria com você todos os dias, pra vida toda, se pudesse.</p>
+
+  <p>Na minha cabeça — e no meu coração — parece que te conheço há anos. E por mais que pareça louco, tem algo em mim que acredita que você é a mulher da minha vida. Talvez seja por isso essa insistência, essa vontade de continuar por perto, mesmo sem saber o motivo exato.</p>
+
+  <p>Eu oro todos os dias pra que Deus toque no teu coração e, de alguma forma, te faça cruzar o meu caminho. Peço pra que, se for pra ser, Ele coloque a gente na vida um do outro do jeito certo, na hora certa.</p>
+
+  <p>Eu não tô escrevendo isso esperando nada em troca, nem pra te deixar confusa. Só precisava ser honesto — contigo e comigo.</p>
+
+  <p>Escrevi esse texto porque precisava colocar pra fora o que eu tava pensando e sentindo. Pra não deixar guardado algo que é tão sincero. É só o motivo pelo qual às vezes pareço insistente demais: porque você me marcou de um jeito que poucas pessoas conseguem marcar alguém.</p>
+
+  <p><strong>Obrigado por ter lido até aqui.</strong></p>
+
+  <form action="https://formspree.io/f/xkgqkojo" method="POST">
+    <textarea name="resposta" placeholder="Se quiser dizer algo..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<audio id="audio" loop>
+<source src="audio/iris.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const playBtn = document.getElementById('playBtn');
+const container = document.getElementById('textContainer');
+const audio = document.getElementById('audio');
+
+playBtn.addEventListener('click', () => {
+  audio.play();
+  container.classList.add('visible');
+  playBtn.style.display = 'none';
+});
+
+// Criar corações flutuantes
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerHTML = '♥';
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.bottom = '-50px';
+  heart.style.top = 'auto';
+  heart.style.animationDelay = Math.random() * 2 + 's';
+  heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 8000);
+}
+
+// Gerar corações continuamente
+setInterval(createHeart, 600);
+
+// Fade-in suave ao rolar
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.container');
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
